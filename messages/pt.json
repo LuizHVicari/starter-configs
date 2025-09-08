@@ -4,5 +4,18 @@
   },
   "common": {
     "toggleLanguage": "Alterar Idioma"
+  },
+  "forms": {
+    "placeholders": {
+      "selectOption": "Selecione uma opção",
+      "pickDate": "Escolha uma data",
+      "search": "Pesquisar...",
+      "comboboxSelect": "Selecione uma opção..."
+    },
+    "messages": {
+      "noOptionFound": "Nenhuma opção encontrada.",
+      "required": "Este campo é obrigatório.",
+      "invalid": "Este campo é inválido."
+    }
   }
 }

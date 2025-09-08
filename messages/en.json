@@ -4,5 +4,18 @@
   },
   "common": {
     "toggleLanguage": "Change Language"
+  },
+  "forms": {
+    "placeholders": {
+      "selectOption": "Select an option",
+      "pickDate": "Pick a date",
+      "search": "Search...",
+      "comboboxSelect": "Select an option..."
+    },
+    "messages": {
+      "noOptionFound": "No option found.",
+      "required": "This field is required.",
+      "invalid": "This field is invalid."
+    }
   }
 }
