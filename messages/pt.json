@@ -1,0 +1,8 @@
+{
+  "app": {
+    "name": "Inicializador Next.js"
+  },
+  "common": {
+    "toggleLanguage": "Alterar Idioma"
+  }
+}

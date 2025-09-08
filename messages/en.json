@@ -1,0 +1,8 @@
+{
+  "app": {
+    "name": "Next.js Starter"
+  },
+  "common": {
+    "toggleLanguage": "Change Language"
+  }
+}
