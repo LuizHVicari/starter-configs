@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import React from 'react';
 
+import { ThemeProvider } from '@/features/common/client/providers/theme-provider';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -26,10 +28,10 @@ export default function RootLayout({
 }>): React.JSX.Element {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

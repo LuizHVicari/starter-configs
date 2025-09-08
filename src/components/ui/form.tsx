@@ -13,7 +13,7 @@ import {
   type FieldValues,
 } from "react-hook-form"
 
-import { cn } from "@/lib/utilities"
+import { cn } from "@/features/common/shared/lib/utilities"
 import { Label } from "@/components/ui/label"
 
 const Form = FormProvider
