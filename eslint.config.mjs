@@ -131,33 +131,40 @@ const config = [
       'eol-last': ['error', 'always'],
       'func-call-spacing': ['error', 'never'],
       'generator-star-spacing': ['error', { before: false, after: true }],
-      indent: ['error', 2, { 
-        SwitchCase: 1,
-        VariableDeclarator: 1,
-        outerIIFEBody: 1,
-        MemberExpression: 1,
-        FunctionDeclaration: { parameters: 1, body: 1 },
-        FunctionExpression: { parameters: 1, body: 1 },
-        CallExpression: { arguments: 1 },
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        flatTernaryExpressions: false,
-        ignoreComments: false
-      }],
+      indent: [
+        'error',
+        2,
+        {
+          SwitchCase: 1,
+          VariableDeclarator: 1,
+          outerIIFEBody: 1,
+          MemberExpression: 1,
+          FunctionDeclaration: { parameters: 1, body: 1 },
+          FunctionExpression: { parameters: 1, body: 1 },
+          CallExpression: { arguments: 1 },
+          ArrayExpression: 1,
+          ObjectExpression: 1,
+          ImportDeclaration: 1,
+          flatTernaryExpressions: false,
+          ignoreComments: false,
+        },
+      ],
       'jsx-quotes': ['error', 'prefer-double'],
       'key-spacing': ['error', { beforeColon: false, afterColon: true }],
       'keyword-spacing': ['error', { before: true, after: true }],
       'linebreak-style': ['error', 'unix'],
-      'max-len': ['error', { 
-        code: 100, 
-        tabWidth: 2, 
-        ignoreUrls: true,
-        ignoreComments: false,
-        ignoreRegExpLiterals: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }],
+      'max-len': [
+        'error',
+        {
+          code: 100,
+          tabWidth: 2,
+          ignoreUrls: true,
+          ignoreComments: false,
+          ignoreRegExpLiterals: true,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true,
+        },
+      ],
       'multiline-ternary': ['error', 'always-multiline'],
       'new-parens': ['error', 'always'],
       'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
@@ -166,12 +173,15 @@ const config = [
       'no-tabs': 'error',
       'no-trailing-spaces': 'error',
       'no-whitespace-before-property': 'error',
-      'object-curly-newline': ['error', { 
-        ObjectExpression: { consistent: true, multiline: true },
-        ObjectPattern: { consistent: true, multiline: true },
-        ImportDeclaration: { consistent: true, multiline: true },
-        ExportDeclaration: { consistent: true, multiline: true }
-      }],
+      'object-curly-newline': [
+        'error',
+        {
+          ObjectExpression: { consistent: true, multiline: true },
+          ObjectPattern: { consistent: true, multiline: true },
+          ImportDeclaration: { consistent: true, multiline: true },
+          ExportDeclaration: { consistent: true, multiline: true },
+        },
+      ],
       'object-curly-spacing': ['error', 'always'],
       'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
       'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
@@ -182,11 +192,14 @@ const config = [
       'semi-spacing': ['error', { before: false, after: true }],
       'semi-style': ['error', 'last'],
       'space-before-blocks': ['error', 'always'],
-      'space-before-function-paren': ['error', {
-        anonymous: 'always',
-        named: 'never',
-        asyncArrow: 'always'
-      }],
+      'space-before-function-paren': [
+        'error',
+        {
+          anonymous: 'always',
+          named: 'never',
+          asyncArrow: 'always',
+        },
+      ],
       'space-in-parens': ['error', 'never'],
       'space-infix-ops': 'error',
       'space-unary-ops': ['error', { words: true, nonwords: false }],
@@ -213,25 +226,34 @@ const config = [
       'react/jsx-newline': ['error', { prevent: false }],
       'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
       'react/jsx-props-no-multi-spaces': 'error',
-      'react/jsx-tag-spacing': ['error', {
-        closingSlash: 'never',
-        beforeSelfClosing: 'always',
-        afterOpening: 'never',
-        beforeClosing: 'never'
-      }],
-      'react/jsx-wrap-multilines': ['error', {
-        declaration: 'parens-new-line',
-        assignment: 'parens-new-line',
-        return: 'parens-new-line',
-        arrow: 'parens-new-line',
-        condition: 'parens-new-line',
-        logical: 'parens-new-line',
-        prop: 'parens-new-line'
-      }],
-      'react/self-closing-comp': ['error', {
-        component: true,
-        html: true
-      }],
+      'react/jsx-tag-spacing': [
+        'error',
+        {
+          closingSlash: 'never',
+          beforeSelfClosing: 'always',
+          afterOpening: 'never',
+          beforeClosing: 'never',
+        },
+      ],
+      'react/jsx-wrap-multilines': [
+        'error',
+        {
+          declaration: 'parens-new-line',
+          assignment: 'parens-new-line',
+          return: 'parens-new-line',
+          arrow: 'parens-new-line',
+          condition: 'parens-new-line',
+          logical: 'parens-new-line',
+          prop: 'parens-new-line',
+        },
+      ],
+      'react/self-closing-comp': [
+        'error',
+        {
+          component: true,
+          html: true,
+        },
+      ],
 
       'react/react-in-jsx-scope': 'off',
     },
@@ -244,6 +266,7 @@ const config = [
       'out/**',
       'build/**',
       'next-env.d.ts',
+      'src/components/ui/**',
     ],
   },
 ];
