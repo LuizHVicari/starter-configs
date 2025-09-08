@@ -13,6 +13,7 @@ export {
 } from './form-combobox';
 export { Calendar, CalendarDayButton, FormDatePicker } from './form-date-picker';
 export { FormInput, Input } from './form-input';
+export { FormPasswordInput } from './form-password-input';
 export { FormRadioGroup, RadioGroup, RadioGroupItem } from './form-radio-group';
 export {
   FormSelect,

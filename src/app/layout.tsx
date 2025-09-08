@@ -5,7 +5,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import React from 'react';
 
-import { ThemeProvider } from '@/features/common/client/providers/theme-provider';
+import { QueryProvider, ThemeProvider } from '@/features/common/client/providers';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,7 +32,7 @@ export default async function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider>
           <ThemeProvider enableSystem attribute="class" defaultTheme="system">
-            {children}
+            <QueryProvider>{children}</QueryProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

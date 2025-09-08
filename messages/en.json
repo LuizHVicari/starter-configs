@@ -17,5 +17,8 @@
       "required": "This field is required.",
       "invalid": "This field is invalid."
     }
+  },
+  "demo": {
+    "search": "Search..."
   }
 }

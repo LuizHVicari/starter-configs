@@ -12,7 +12,7 @@ export function LimitedPage({
 }: Properties): React.JSX.Element {
   return (
     <div
-      className={cn('flex flex-col w-full justify-center items-start', className)}
+      className={cn('flex flex-col w-full justify-start items-center', className)}
       {...properties}
     >
       <div className={cn('w-full max-w-7xl', innerClassName)}>{children}</div>

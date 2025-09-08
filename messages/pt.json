@@ -17,5 +17,8 @@
       "required": "Este campo é obrigatório.",
       "invalid": "Este campo é inválido."
     }
+  },
+  "demo": {
+    "search": "Pesquisar..."
   }
 }
