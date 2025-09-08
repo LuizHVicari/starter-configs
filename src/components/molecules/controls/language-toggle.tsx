@@ -2,6 +2,7 @@
 
 import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
 import { Globe } from 'lucide-react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
@@ -24,8 +25,20 @@ export function LanguageToggle(): React.JSX.Element {
           </TooltipTrigger>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          <DropdownMenuItem onClick={async () => setLocale('en')}>English</DropdownMenuItem>
-          <DropdownMenuItem onClick={async () => setLocale('pt')}>Português</DropdownMenuItem>
+          <DropdownMenuItem
+            className="flex items-center gap-2"
+            onClick={async () => setLocale('en')}
+          >
+            <Image alt="English Flag" height={20} src="/flags/united-states.svg" width={20} />
+            English
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            className="flex gap-2 items-center"
+            onClick={async () => setLocale('pt')}
+          >
+            <Image alt="Brazilian Flag" height={20} src="/flags/brazil.svg" width={20} />
+            Português
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </Tooltip>
