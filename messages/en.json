@@ -20,5 +20,33 @@
   },
   "demo": {
     "search": "Search..."
+  },
+  "activity": {
+    "form": {
+      "title": "Add New Activity",
+      "titleField": "Title",
+      "description": "Description",
+      "priority": "Priority",
+      "status": "Status",
+      "submit": "Add Activity"
+    },
+    "list": {
+      "title": "Activities",
+      "empty": "No activities yet. Create your first one!"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "status": {
+      "todo": "To Do",
+      "in-progress": "In Progress",
+      "completed": "Completed"
+    },
+    "validation": {
+      "titleTooLong": "Title must be less than 100 characters",
+      "descriptionTooLong": "Description must be less than 500 characters"
+    }
   }
 }

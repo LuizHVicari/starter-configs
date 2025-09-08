@@ -3,6 +3,7 @@ import { QueryKey } from '@tanstack/react-query';
 export const demoQueryKeyPrefix = 'demo';
 
 export const productsQueryPrefix = 'products';
+export const activitiesQueryPrefix = 'activities';
 
 interface ListProductsProperties {
   page?: number;
@@ -18,5 +19,10 @@ export const listProductsQueryKey = ({ page, pageSize, query }: ListProductsProp
 export const invalidateAllDemoQueries = (key: QueryKey): boolean =>
   key.includes(demoQueryKeyPrefix);
 
+export const activitiesQueryKey = (): string[] => [demoQueryKeyPrefix, activitiesQueryPrefix];
+
 export const invalidateAllProductsQueries = (key: QueryKey): boolean =>
   key.includes(productsQueryPrefix);
+
+export const invalidateAllActivitiesQueries = (key: QueryKey): boolean =>
+  key.includes(activitiesQueryPrefix);
