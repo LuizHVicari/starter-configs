@@ -3,7 +3,9 @@
     "name": "Inicializador Next.js"
   },
   "common": {
-    "toggleLanguage": "Alterar Idioma"
+    "toggleLanguage": "Alterar Idioma",
+    "loading": "Carregando...",
+    "error": "Algo deu errado"
   },
   "forms": {
     "placeholders": {
@@ -24,16 +26,35 @@
   "activity": {
     "form": {
       "title": "Adicionar Nova Atividade",
-      "titleField": "Título",
-      "description": "Descrição",
-      "priority": "Prioridade",
-      "status": "Status",
-      "submit": "Adicionar Atividade"
+      "description": "Crie uma nova atividade com título, descrição, prioridade e status.",
+      "fields": {
+        "title": {
+          "label": "Título",
+          "placeholder": "Digite o título da atividade"
+        },
+        "description": {
+          "label": "Descrição",
+          "placeholder": "Digite a descrição da atividade"
+        },
+        "priority": {
+          "label": "Prioridade",
+          "placeholder": "Selecione a prioridade"
+        },
+        "status": {
+          "label": "Status",
+          "placeholder": "Selecione o status"
+        }
+      },
+      "submit": "Adicionar Atividade",
+      "submitting": "Adicionando...",
+      "success": "Atividade adicionada com sucesso!",
+      "error": "Falha ao adicionar atividade. Tente novamente."
     },
     "list": {
       "title": "Atividades",
       "empty": "Nenhuma atividade ainda. Crie a primeira!"
     },
+    "noActivities": "Nenhuma atividade encontrada",
     "priority": {
       "low": "Baixa",
       "medium": "Média",

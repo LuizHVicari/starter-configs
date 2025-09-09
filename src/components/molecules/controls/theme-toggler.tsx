@@ -2,7 +2,7 @@
 
 import { Check, Moon, Sun, SunMoon } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Show } from '@/components/atoms';
 import { Button } from '@/components/ui/button';
@@ -17,9 +17,14 @@ export function ThemeToggler({
   ...properties
 }: React.ComponentProps<typeof DropdownMenu>): React.JSX.Element {
   const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const getThemeIcon = (): React.JSX.Element => {
-    if (theme === 'system') {
+    if (!mounted || !theme || theme === 'system') {
       return <SunMoon />;
     }
     if (theme === 'light') {

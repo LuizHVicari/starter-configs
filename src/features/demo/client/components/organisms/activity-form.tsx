@@ -10,21 +10,21 @@ import { Form } from '@/components/ui/form';
 
 import { useActivityForm } from '../../forms';
 
-const priorityOptions = [
-  { value: 'low', label: 'activity.priority.low' },
-  { value: 'medium', label: 'activity.priority.medium' },
-  { value: 'high', label: 'activity.priority.high' },
-];
-
-const statusOptions = [
-  { value: 'todo', label: 'activity.status.todo' },
-  { value: 'in-progress', label: 'activity.status.in-progress' },
-  { value: 'completed', label: 'activity.status.completed' },
-];
-
 export function ActivityForm(): React.JSX.Element {
   const { form, onSubmit, isSubmitting, isSuccess, error } = useActivityForm();
   const t = useTranslations();
+
+  const priorityOptions = [
+    { value: 'low', label: t('activity.priority.low') },
+    { value: 'medium', label: t('activity.priority.medium') },
+    { value: 'high', label: t('activity.priority.high') },
+  ];
+
+  const statusOptions = [
+    { value: 'todo', label: t('activity.status.todo') },
+    { value: 'in-progress', label: t('activity.status.in-progress') },
+    { value: 'completed', label: t('activity.status.completed') },
+  ];
 
   return (
     <Card>
@@ -38,29 +38,29 @@ export function ActivityForm(): React.JSX.Element {
             <VStack className="gap-4">
               <FormInput
                 control={form.control}
-                label="activity.form.fields.title.label"
+                labelKey="activity.form.fields.title.label"
                 name="title"
-                placeholder="activity.form.fields.title.placeholder"
+                placeholder={t('activity.form.fields.title.placeholder')}
               />
               <FormTextarea
                 control={form.control}
-                label="activity.form.fields.description.label"
+                labelKey="activity.form.fields.description.label"
                 name="description"
-                placeholder="activity.form.fields.description.placeholder"
+                placeholder={t('activity.form.fields.description.placeholder')}
               />
               <FormSelect
                 control={form.control}
-                label="activity.form.fields.priority.label"
+                labelKey="activity.form.fields.priority.label"
                 name="priority"
                 options={priorityOptions}
-                placeholder="activity.form.fields.priority.placeholder"
+                placeholderKey="activity.form.fields.priority.placeholder"
               />
               <FormSelect
                 control={form.control}
-                label="activity.form.fields.status.label"
+                labelKey="activity.form.fields.status.label"
                 name="status"
                 options={statusOptions}
-                placeholder="activity.form.fields.status.placeholder"
+                placeholderKey="activity.form.fields.status.placeholder"
               />
               <Show when={error}>
                 <p className="text-sm text-destructive">{t('activity.form.error')}</p>

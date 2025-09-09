@@ -3,7 +3,9 @@
     "name": "Next.js Starter"
   },
   "common": {
-    "toggleLanguage": "Change Language"
+    "toggleLanguage": "Change Language",
+    "loading": "Loading...",
+    "error": "Something went wrong"
   },
   "forms": {
     "placeholders": {
@@ -24,16 +26,35 @@
   "activity": {
     "form": {
       "title": "Add New Activity",
-      "titleField": "Title",
-      "description": "Description",
-      "priority": "Priority",
-      "status": "Status",
-      "submit": "Add Activity"
+      "description": "Create a new activity with title, description, priority and status.",
+      "fields": {
+        "title": {
+          "label": "Title",
+          "placeholder": "Enter activity title"
+        },
+        "description": {
+          "label": "Description",
+          "placeholder": "Enter activity description"
+        },
+        "priority": {
+          "label": "Priority",
+          "placeholder": "Select priority"
+        },
+        "status": {
+          "label": "Status",
+          "placeholder": "Select status"
+        }
+      },
+      "submit": "Add Activity",
+      "submitting": "Adding...",
+      "success": "Activity added successfully!",
+      "error": "Failed to add activity. Please try again."
     },
     "list": {
       "title": "Activities",
       "empty": "No activities yet. Create your first one!"
     },
+    "noActivities": "No activities found",
     "priority": {
       "low": "Low",
       "medium": "Medium",
