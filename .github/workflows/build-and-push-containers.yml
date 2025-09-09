@@ -35,11 +35,12 @@ jobs:
       - name: Set image name and tags
         id: image-config
         run: |
+          REPO_NAME=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
           if [[ "${{ github.ref_name }}" == "dev" ]]; then
-            IMAGE_NAME="ghcr.io/${{ github.repository }}-dev"
+            IMAGE_NAME="ghcr.io/${REPO_NAME}-dev"
             echo "tags=${IMAGE_NAME}:${{ steps.package-version.outputs.version }},${IMAGE_NAME}:latest" >> $GITHUB_OUTPUT
           else
-            IMAGE_NAME="ghcr.io/${{ github.repository }}"
+            IMAGE_NAME="ghcr.io/${REPO_NAME}"
             echo "tags=${IMAGE_NAME}:${{ steps.package-version.outputs.version }},${IMAGE_NAME}:latest" >> $GITHUB_OUTPUT
           fi
 

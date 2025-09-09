@@ -8,13 +8,23 @@ import { ActivityFormData, activityFormSchema } from '../../shared/schemas/activ
 import { Activity } from '../../shared/types/activity-types';
 import { invalidateAllActivitiesQueries } from '../data-hooks/demo-query-keys';
 
-let activityIdCounter = 1;
+const getNextActivityId = (): string => {
+  const stored = localStorage.getItem('activities');
+  const existingActivities: Activity[] = stored ? JSON.parse(stored) : [];
+
+  const maxId = existingActivities.reduce((max, activity) => {
+    const idNumber = Number.parseInt(activity.id.replace('activity-', ''), 10);
+    return idNumber > max ? idNumber : max;
+  }, 0);
+
+  return `activity-${maxId + 1}`;
+};
 
 const createActivity = async (data: ActivityFormData): Promise<Activity> => {
   await new Promise((resolve) => setTimeout(resolve, 500));
 
   const newActivity: Activity = {
-    id: `activity-${activityIdCounter++}`,
+    id: getNextActivityId(),
     title: data.title,
     description: data.description,
     priority: data.priority,
