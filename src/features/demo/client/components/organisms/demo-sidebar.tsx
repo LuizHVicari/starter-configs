@@ -14,7 +14,7 @@ import {
 import { useTranslations } from 'next-intl';
 
 import { For } from '@/components/atoms';
-import { LanguageToggle, ThemeToggler } from '@/components/molecules/controls';
+import { LanguageToggle, ThemeSelector } from '@/components/molecules/controls';
 import {
   Sidebar,
   SidebarContent,
@@ -107,7 +107,7 @@ export function DemoSidebar(): React.JSX.Element {
                     Theme & Language
                   </span>
                   <div className="flex items-center gap-1">
-                    <ThemeToggler />
+                    <ThemeSelector />
                     <LanguageToggle />
                   </div>
                 </div>
