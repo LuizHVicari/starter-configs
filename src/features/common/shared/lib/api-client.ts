@@ -1,5 +1,11 @@
 import axios from 'axios';
 
-export const apiClient = axios.create({
-  baseURL: 'https://dummyjson.com',
+import { getRuntimeEnvironment } from './config';
+
+export const apiClient = axios.create();
+
+getRuntimeEnvironment('API_URL').then((baseURL) => {
+  if (baseURL) {
+    apiClient.defaults.baseURL = baseURL;
+  }
 });

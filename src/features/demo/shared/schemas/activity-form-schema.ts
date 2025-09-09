@@ -7,10 +7,10 @@ export const activityFormSchema = z.object({
     .min(1, 'forms.messages.required')
     .max(500, 'activity.validation.descriptionTooLong'),
   priority: z.enum(['low', 'medium', 'high'], {
-    required_error: 'forms.messages.required',
+    error: 'forms.messages.required',
   }),
   status: z.enum(['todo', 'in-progress', 'completed'], {
-    required_error: 'forms.messages.required',
+    error: 'forms.messages.required',
   }),
 });
 

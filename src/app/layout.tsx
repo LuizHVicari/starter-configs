@@ -28,7 +28,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>): Promise<React.JSX.Element> {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
+      <head />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider>
           <ThemeProvider enableSystem attribute="class" defaultTheme="system">

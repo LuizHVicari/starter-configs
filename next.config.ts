@@ -2,8 +2,14 @@ import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
+  ...(process.env.DOCKER_BUILD === 'true' && { output: 'standalone' }),
   images: {
-    domains: ['cdn.dummyjson.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.dummyjson.com',
+      },
+    ],
   },
 };
 
